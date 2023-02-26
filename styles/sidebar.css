@@ -1,0 +1,141 @@
+.sidebar {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   top: 55px;
+   background-color: #fff;
+   width: 72px;
+   z-index: 1;
+   padding: 5px 0;
+   padding-top: 0;
+}
+
+.sidebar-link {
+   height: 76px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.sidebar-link img {
+   height: 24px;
+   margin-bottom: 4px;
+}
+
+.sidebar-link:hover {
+   background-color: rgb(235, 235, 235);
+   cursor: pointer;
+}
+
+.sidebar-link div {
+   font-size: 10px;
+}
+
+.github-link {
+   position: absolute;
+   bottom: 0;
+   height: 76px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+}
+
+.github-link:hover {
+   background-color: rgb(235, 235, 235);
+   cursor: pointer;
+}
+
+.github-link i {
+   font-size: 34px;
+   margin-bottom: 8px;
+}
+
+.github-link div {
+   font-size: 12px;
+}
+
+@media (min-width: 1200.1px) {
+   .sidebar {
+      width: 225px;
+   }
+
+   body {
+      padding-left: 250px;
+   }
+
+   .sidebar-link {
+      height: 50px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      flex-direction: row;
+      padding-left: 24px;
+   }
+
+   .sidebar-link div {
+      font-size: 13px;
+      margin-left: 24px;
+      font-weight: 500;
+      align-items: center;
+   }
+
+   .sidebar-link img {
+      height: 30px;
+      margin-bottom: 0;
+   }
+
+   .github-link {
+      height: 50px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      flex-direction: row;
+      padding-left: 24px;
+      width: 201px;
+   }
+
+   .github-link i {
+      font-size: 34px;
+      margin-bottom: 0px;
+      margin-right: 24px;
+   }
+
+   .github-link div {
+      font-size: 13px;
+      font-weight: 500;
+      align-items: center;
+   }
+}
+
+@media (max-width: 450px) {
+   .sidebar {
+      left: -100px;
+      transition: 0.35s cubic-bezier(0.075, 0.82, 0.165, 1);
+      transform-origin: left center;
+      opacity: 1;
+   }
+
+   .sidebar-active {
+      left: 0;
+      opacity: 1;
+   }
+
+   body {
+      padding-left: 24px;
+   }
+
+   .github-link {
+      width: 100%;
+   }
+
+   .github-link i {
+      font-size: 28px;
+   }
+
+   .github-link span {
+      font-size: 12px;
+   }
+}
